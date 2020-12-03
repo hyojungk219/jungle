@@ -5,9 +5,70 @@
     <meta name="viewport" content="width=device-width">
     <title>html</title>
 		<style>
+			/* body, h1{margin:0}
+			.wrap{width:700px; height:400px; background:#ccc} */
+
+			/* % */
+			/* body, h1{margin:0}
+			html, body{height:100%}
+			.wrap{width:700px; height:50%; background:#ccc}
+			.unit{background: red; height: 50%;} */
+
+			/* vh, vw */
+			/* body, h1{margin:0}
+			.wrap{
+				width:700px;
+				height:50vh;
+				width:100vw;
+				background:#ccc
+			}
+			.unit{
+				background: red;
+				height: 60vh;
+			} */
+
+			/* 검색창*/
 			body, h1{margin:0}
-			
-			.wrap{width:700px; height:400px; background:#ccc}
+			.wrap{
+				width:700px; 
+				height:400px; 
+				background:#ccc;
+				padding: 20px}
+			.box_input{
+				border:1px solid orange;
+				width: 400px;
+				background: white;
+				height: 30px;
+			}
+			/* .box_input > input{
+				height: 24px;
+				width: 300px;
+				vertical-align: middle;
+				border: none;
+			}
+			.box_input > button {
+				width: 85px;
+				height: 28px;
+				vertical-align: middle;
+				background: transparent;
+				border: none;
+			} */
+
+			/* calc */
+				.box_input > input{
+				height: 30px;
+				width: calc(100% - 100px);
+				vertical-align: middle;
+				border: none;
+				box-sizing: border-box;
+			}
+			.box_input > button {
+				width: 85px;
+				height: 30px;
+				vertical-align: middle;
+				background: transparent;
+				border: none;
+			}
 
 			
 		</style>
@@ -18,7 +79,7 @@
 			<div class="unit">
 				<div class="box_input">
 					<input>
-					<button></button>
+					<button>버튼</button>
 				</div>
 			</div>
 		</div>

@@ -15,6 +15,30 @@
 			}
 
 			.container{width:800px; margin:0 auto;text-align:center}
+
+			.section.box ul li{display: inline-block;}
+			.section.box ul li:first-child{color: red} /* li 중 첫 번째 선택 */
+			.section.box ul li:nth-child(2){color:blue} /* li 중 두 번째 선택 */
+			.section.box ul > *{border:1px solid #333}  /* ul 하위 모든 요소 선택 (>있으면 바로 밑 하위만, >없으면 모든 요소) */
+			/* .section.box ul *{border:1px solid #333} */
+			.section.box > ul{border: 4px solid green} /* 자식 선택자 */
+			.section.box > ul li + li{margin-left: 50px;} /* 특정 태그 뒤에 해당 태그가 인접할 경우 선택 */
+			.section.box ul li:before{
+				content: '';
+				display: inline-block;
+				width: 3px;
+				height: 3px;
+				background: red;
+				vertical-align: middle;
+				margin-top: -2px;
+			}
+			.section.box ul li:after{content: '!';}
+			.section.box ul:hover{
+				background: #999;
+			}
+			.section.link div a:hover{
+				font-weight: bold;
+			}
 		</style>
 
   </head>
@@ -26,13 +50,17 @@
 				<div class="section box">
 					<ul>
 						<li class="box">
-							<a href="#">box1</a>
+							box1
+							<span>확인</span>
+							<ul>
+								<li>하위 리스트</li>
+							</ul>
 						</li>
 						<li class="box">
-							<a href="#">box2</a>
+							box2
 						</li>
 						<li class="box">
-							<a href="#">box3</a>
+							box3
 						</li>
 					</ul>
 				</div>

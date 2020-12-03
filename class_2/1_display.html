@@ -12,6 +12,58 @@
 				background:#333;
 				color:#fff;
 				padding:20px;
+				text-align: center;
+			}
+			.header h1{
+				display: inline-block;
+				margin-right: 100px;
+			}
+			.header .nav{
+				display: inline-block;
+			}
+
+			/* float 활용 좌우배치 */
+			/* .container .aside{
+				width: 200px;
+				height: 400px;
+				background-color: #23a8fe;
+				float: left;
+			}
+			.container .section{
+				background-color: violet;
+				width: calc(100% - 200px);
+				height: 400px;
+				float: right;
+			} */
+
+			/* table 활용 좌우배치 */
+			/* .container{
+				display: table;
+				width: 100%;
+			}
+			.container .aside{
+				background-color: #23a8fe;
+				width: 200px;
+				display: table-cell;
+			}
+			.container .section{
+				background-color: violet;
+				display: table-cell;
+			} */
+
+			/* flex 활용 좌우배치 */
+			.container{
+				display: flex;
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.container .aside{
+				background-color: #23a8fe;
+				width: 200px;
+			}
+			.container .section{
+				background-color: violet;
+				flex: 1;
 			}
 		</style>
 
