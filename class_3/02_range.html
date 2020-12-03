@@ -6,10 +6,95 @@
     <title>repl.it</title>
 		<link rel="stylesheet" href="css/reset.css">
     <style>
-			
+			.wrap{
+        width: 1200px;
+        background-color: #eee;
+        margin: 0 auto; /* width값이 있는 block요소를 가운데 정렬 */
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .header{
+        height: 100px;
+        background-color: teal;
+        text-align: center;
+        line-height: 100px; /* 행간 값을 동일하게 하여 중앙으로 오게 함 */
+      }
+      .container{
+        display: flex;
+        height: 500px;
+      }
+      .content{
+        background-color: tomato;
+        flex: 1;
+      }
+      .aside{
+        background-color: sandybrown;
+        width: 200px;
+      }
+      .footer{
+        height: 100px;
+        background-color: steelblue;
+        text-align: center;
+        line-height: 100px;
+      }
+      @media all and (max-width: 1200px){
+        .wrap{
+          width: 1024px;
+        }
+      }
+      @media all and (max-width: 1024px){
+        .wrap{
+          width: 768px;
+        }
+        .container{
+          display: block;
+          height: auto;
+        }
+        .content{
+          height: 400px;
+        }
+        .aside{
+          width: auto;
+          height: 100px;
+        }
+      }
+      @media all and (max-width: 768px){
+        .wrap{
+          width: auto;
+        }
+        .content{
+          line-height: 400px;
+          text-align: center;
+        }
+        .aside{
+          line-height: 100px;
+          text-align: center;
+        }
+      }
 		</style>
   </head>
   <body>
-    
+    <div class="wrap">
+      <div class="header">
+        header
+      </div>
+      <!-- header -->
+
+      <div class="container">
+        <div class="content">
+          content
+        </div>
+        <div class="aside">
+          aside
+        </div>
+      </div>
+      <!-- container -->
+
+      <div class="footer">
+        footer
+      </div>
+      <!-- footer -->
+    </div>
   </body>
 </html>
